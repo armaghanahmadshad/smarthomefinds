@@ -212,3 +212,32 @@ h1 em { color: #b88734; }
   .category-grid, .guide-grid { grid-template-columns: 1fr; }
   .category-card { min-height: 210px; }
 }
+
+
+/* Featured product photography */
+.product-photo {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 18px;
+  background: #faf9f6;
+  border-bottom: 1px solid #eee;
+}
+
+.guide-card {
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .09);
+}
+
+@media (max-width: 750px) {
+  .product-photo {
+    height: 200px;
+  }
+}
+

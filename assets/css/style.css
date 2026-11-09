@@ -305,6 +305,75 @@ h1 em { color: #b88734; }
     grid-template-columns: 1fr;
   }
 
+  
+/* =================================
+   PRODUCT COMPARISON TABLE
+================================= */
+
+.comparison-section {
+  margin-top: 75px;
+}
+
+.comparison-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.comparison-heading h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 10px 0;
+}
+
+.comparison-heading > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.comparison-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #eee;
+  background: white;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparison-table th {
+  background: var(--navy);
+  color: white;
+  padding: 17px 18px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.comparison-table td {
+  padding: 18px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  color: var(--muted);
+  vertical-align: top;
+}
+
+.comparison-table td strong {
+  color: var(--navy);
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--cream);
+}
+
+.comparison-note {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 14px;
+}
+
   .product-image {
     height: 250px;
   }

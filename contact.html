@@ -47,8 +47,38 @@
 
     <p>Have a question, suggestion, correction or business inquiry? Feel free to contact the SmartHomeFinds team.</p>
 
+    <h2>Send Us a Message</h2>
+    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="15ad3773-6e74-491d-903e-7c54ac822203">
+      <input type="hidden" name="from_name" value="SmartHomeFinds Website">
+      <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-row">
+        <label for="cf-name">Your name</label>
+        <input type="text" id="cf-name" name="name" required maxlength="100" autocomplete="name">
+      </div>
+
+      <div class="form-row">
+        <label for="cf-email">Your email</label>
+        <input type="email" id="cf-email" name="email" required maxlength="150" autocomplete="email">
+      </div>
+
+      <div class="form-row">
+        <label for="cf-subject">Subject</label>
+        <input type="text" id="cf-subject" name="subject" required maxlength="150">
+      </div>
+
+      <div class="form-row">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="6" required maxlength="3000"></textarea>
+      </div>
+
+      <button type="submit" class="button" id="cf-submit">Send Message →</button>
+      <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+    </form>
+
     <h2>Email Us</h2>
-    <p>For general questions and feedback, email us at:</p>
+    <p>Prefer email? You can reach us directly at:</p>
     <p><a href="mailto:armaghanahmadshad@gmail.com">armaghanahmadshad@gmail.com</a></p>
 
     <h2>Business Inquiries</h2>

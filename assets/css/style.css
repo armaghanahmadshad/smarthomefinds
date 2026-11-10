@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root {
   --navy: #0f172a;
@@ -34,6 +33,8 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   border-bottom: 1px solid #eee;
   background: white;
+  position: relative;
+  z-index: 10;
 }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; }
 .brand-mark {
@@ -195,7 +196,7 @@ h1 em { color: #b88734; }
   .nav {
     display: none;
     position: absolute;
-    top: 120px;
+    top: 100%;
     left: 0;
     right: 0;
     padding: 22px;
@@ -305,7 +306,12 @@ h1 em { color: #b88734; }
     grid-template-columns: 1fr;
   }
 
-  
+  .product-image {
+    height: 250px;
+  }
+}
+
+
 /* =================================
    PRODUCT COMPARISON TABLE
 ================================= */
@@ -374,8 +380,85 @@ h1 em { color: #b88734; }
   margin-top: 14px;
 }
 
-  .product-image {
-    height: 250px;
-  }
+
+/* =================================
+   POLISH & ACCESSIBILITY
+================================= */
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
 }
 
+img { max-width: 100%; height: auto; }
+
+.nav a[aria-current="page"] { color: #a77a2c; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 100;
+}
+.skip-link:focus { left: 10px; top: 10px; }
+
+/* Affiliate notice shown next to product cards */
+.affiliate-note {
+  margin-top: 22px;
+  padding: 14px 18px;
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  color: var(--muted);
+  font-size: 12px;
+}
+.affiliate-note a { color: #a77a2c; text-decoration: underline; }
+
+.product-info .text-link {
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+}
+
+/* Inner pages (guides, privacy, about, contact) */
+.page-content .page-header { margin-bottom: 10px; }
+.page-content .page-header > p:not(.eyebrow) { color: #596273; font-size: 17px; }
+.page-content .content-section { margin-top: 8px; }
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 22px 0 30px;
+  font-size: 14px;
+  display: block;
+  overflow-x: auto;
+}
+.page-content th {
+  background: var(--navy);
+  color: #fff;
+  text-align: left;
+  padding: 13px 16px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+.page-content td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #eee;
+  color: #596273;
+}
+.page-content tbody tr:nth-child(even) { background: var(--cream); }
+.page-content ol { padding-left: 25px; }
+
+.footer-links { flex-wrap: wrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+/* Product photos fill the card (bulb photo has a dark background) */
+.product-image img { object-fit: cover; padding: 0; }
+
+@media (min-width: 1000px) {
+  .guide-grid { grid-template-columns: repeat(3, 1fr); }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://armaghanahmadshad.github.io/smarthomefinds/sitemap.xml

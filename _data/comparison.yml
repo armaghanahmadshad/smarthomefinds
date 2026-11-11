@@ -1,0 +1,15 @@
+- device: Smart Bulbs
+  purpose: Lighting control
+  connectivity: Wi-Fi / Zigbee / Matter*
+  advantages: Scheduling, brightness and color control
+  considerations: Hub requirements and compatibility
+- device: Smart Plugs
+  purpose: Appliance automation
+  connectivity: Wi-Fi / Matter*
+  advantages: Remote control and scheduling
+  considerations: Power rating and appliance suitability
+- device: Security Cameras
+  purpose: Home monitoring
+  connectivity: Usually Wi-Fi
+  advantages: Live viewing and motion alerts
+  considerations: Privacy, storage and subscription costs

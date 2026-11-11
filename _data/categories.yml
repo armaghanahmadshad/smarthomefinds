@@ -1,0 +1,24 @@
+# Guide categories. A guide picks one with:  category: <id>
+- id: kitchen
+  name: Home Organization
+  tile_class: kitchen      # colour of the homepage tile
+  visual: visual-kitchen   # colour of the guide card banner
+  tile_label: ORGANIZE BETTER
+  tile_title: "Kitchen<br>Organization"
+  tile_cta: "Explore Ideas →"
+
+- id: smart
+  name: Smart Home Technology
+  tile_class: smart
+  visual: visual-smart
+  tile_label: LIVE SMARTER
+  tile_title: "Smart Home<br>Technology"
+  tile_cta: "Explore Guide →"
+
+- id: devices
+  name: Smart Devices
+  tile_class: home
+  visual: visual-smart
+  tile_label: MAKE BETTER CHOICES
+  tile_title: "Smart Devices"
+  tile_cta: "Discover Devices →"

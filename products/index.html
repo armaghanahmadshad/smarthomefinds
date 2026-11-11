@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Smart Home Products"
+description: "Browse smart home products we feature, grouped by category, with notes on what to look for before you buy."
+---
+  <main class="section hub" id="main-content">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">EXPLORE SMART TECHNOLOGY</p>
+        <h1>Smart Home Products</h1>
+      </div>
+      <p>
+        Popular smart home devices and what features
+        matter before you buy.
+      </p>
+    </div>
+
+{% include search-box.html %}
+
+    <div class="product-grid">
+{% for p in site.data.products %}{% include product-card.html p=p %}
+{% endfor %}
+    </div>
+
+{% include affiliate-note.html %}
+
+  </main>

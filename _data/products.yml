@@ -1,0 +1,40 @@
+# All affiliate products live here. Do NOT change a url or subid without checking Admitad first.
+# To add a product: copy one block, change every field, add the image to assets/images/.
+- id: smart-led-bulbs
+  name: Smart LED Bulbs
+  category: Smart Lighting
+  featured: true
+  image: bulb.jpg
+  width: 900
+  height: 900
+  alt: Smart LED light bulb
+  description: Explore app-controlled lighting, adjustable brightness, scheduling, and color options.
+  store: AliExpress
+  subid: smartbulb01
+  url: 'https://rzekl.com/g/1e8d114494430c58f04f16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F1005008848360855.html&subid=smartbulb01'
+
+- id: smart-plugs
+  name: Smart Plugs
+  category: Home Automation
+  featured: true
+  image: Plug.jpg
+  width: 1200
+  height: 675
+  alt: Smart Wi-Fi plug
+  description: Discover how smart plugs help automate ordinary appliances and manage devices remotely.
+  store: AliExpress
+  subid: smartplug01
+  url: 'https://rzekl.com/g/1e8d114494430c58f04f16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F1005012584972519.html&subid=smartplug01'
+
+- id: smart-security-cameras
+  name: Smart Security Cameras
+  category: Home Security
+  featured: true
+  image: Camera.jpg
+  width: 1200
+  height: 800
+  alt: Indoor smart home security camera
+  description: Understand video quality, storage options, motion detection, and privacy features.
+  store: AliExpress
+  subid: smartcam01
+  url: 'https://rzekl.com/g/1e8d114494430c58f04f16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F1005008459563215.html&subid=smartcam01'

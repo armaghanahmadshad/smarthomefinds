@@ -1,0 +1,21 @@
+---
+layout: page
+title: "Search"
+description: "Search SmartHomeFinds guides and products."
+permalink: /search/
+noindex: true
+sitemap: false
+scripts:
+  - search.js
+---
+    <p class="eyebrow">FIND WHAT YOU NEED</p>
+    <h1>Search</h1>
+
+    <form class="search-form" action="{{ site.baseurl }}/search/" method="get" role="search">
+      <label for="site-search" class="visually-hidden">Search guides and products</label>
+      <input id="site-search" type="search" name="q" placeholder="Search guides and products…" autocomplete="off">
+      <button type="submit" class="button">Search</button>
+    </form>
+
+    <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
+    <div id="search-results" data-index="{{ site.baseurl }}/search.json"></div>

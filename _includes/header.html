@@ -1,0 +1,10 @@
+  <header class="site-header">
+    <a href="{{ site.baseurl }}/" class="brand">
+      <span class="brand-mark">S</span>
+      <span>SmartHome<span class="brand-accent">Finds</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav">
+{% for item in site.data.navigation.main %}      <a href="{{ site.baseurl }}{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% elsif item.collection and page.collection == item.collection %} aria-current="page"{% endif %}>{{ item.title }}</a>
+{% endfor %}    </nav>
+  </header>

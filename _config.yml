@@ -1,0 +1,31 @@
+# SmartHomeFinds - Jekyll configuration (GitHub Pages builds this automatically)
+title: SmartHomeFinds
+description: SmartHomeFinds helps you discover smart home devices, practical buying guides, home organization ideas, and automation tips.
+author: SmartHomeFinds
+url: "https://armaghanahmadshad.github.io"
+baseurl: "/smarthomefinds"
+announcement: "DISCOVER SMARTER LIVING • EXPLORE BETTER TECHNOLOGY"
+og_image: /assets/images/og-image.jpg
+
+markdown: kramdown
+
+# Every file inside _guides/ becomes a page at /guides/<file-name>.html
+collections:
+  guides:
+    output: true
+    permalink: /guides/:name.html
+
+defaults:
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: guide
+
+exclude:
+  - README.md
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

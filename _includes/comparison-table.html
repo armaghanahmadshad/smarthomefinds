@@ -1,0 +1,41 @@
+<div class="comparison-section">
+
+  <div class="comparison-heading">
+    <p class="eyebrow">COMPARE BEFORE YOU BUY</p>
+    <h2>Smart Home Device Comparison</h2>
+    <p>
+      Compare popular smart home device categories
+      and understand their main features.
+    </p>
+  </div>
+
+  <div class="comparison-scroll">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>Main Purpose</th>
+          <th>Connectivity</th>
+          <th>Advantages</th>
+          <th>Things to Consider</th>
+        </tr>
+      </thead>
+      <tbody>
+{% for row in site.data.comparison %}        <tr>
+          <td><strong>{{ row.device }}</strong></td>
+          <td>{{ row.purpose }}</td>
+          <td>{{ row.connectivity }}</td>
+          <td>{{ row.advantages }}</td>
+          <td>{{ row.considerations }}</td>
+        </tr>
+{% endfor %}      </tbody>
+    </table>
+  </div>
+
+  <p class="comparison-note">
+    *Connectivity and compatibility vary by model.
+    Always check the manufacturer's specifications
+    before purchasing.
+  </p>
+
+</div>

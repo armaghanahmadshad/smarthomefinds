@@ -1,0 +1,11 @@
+  <footer class="footer">
+    <a class="brand footer-brand" href="{{ site.baseurl }}/">
+      <span class="brand-mark">S</span>
+      <span>SmartHome<span class="brand-accent">Finds</span></span>
+    </a>
+    <p>Helping you discover smarter technology and better ways to organize your home.</p>
+    <div class="footer-links">
+{% for item in site.data.navigation.footer %}      <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+{% endfor %}    </div>
+    <small>© <span id="year">{{ site.time | date: "%Y" }}</span> {{ site.title }}. All rights reserved.</small>
+  </footer>

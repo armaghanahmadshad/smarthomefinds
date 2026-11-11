@@ -1,11 +1,13 @@
+---
+layout: null
+sitemap: false
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/</loc><lastmod>2026-11-09</lastmod><priority>1.0</priority></url>
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/about.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/contact.html</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/disclosure.html</loc><lastmod>2026-11-09</lastmod><priority>0.3</priority></url>
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/privacy.html</loc><lastmod>2026-11-09</lastmod><priority>0.3</priority></url>
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/guides/kitchen-organization.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/guides/smart-home-starter.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
-  <url><loc>https://armaghanahmadshad.github.io/smarthomefinds/guides/best-smart-home-devices.html</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
+{% for p in site.pages %}{% unless p.sitemap == false or p.noindex %}
+  <url><loc>{{ site.url }}{{ site.baseurl }}{{ p.url }}</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+{% endunless %}{% endfor %}
+{% for g in site.guides %}
+  <url><loc>{{ site.url }}{{ site.baseurl }}{{ g.url }}</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod></url>
+{% endfor %}
 </urlset>

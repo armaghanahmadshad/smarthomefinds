@@ -1,0 +1,31 @@
+{% capture full_title %}{% if page.full_title %}{{ page.full_title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% endcapture %}
+{% assign desc = page.description | default: site.description %}
+{% assign canonical = site.url | append: site.baseurl | append: page.url %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mitgo-verification" content="a36c9b8a-157d-4622-9167-79dfe61b6a33" />
+  <meta name="p:domain_verify" content="f05c4cf6add2a79fce091291d6f17f23"/>
+  <title>{{ full_title | escape }}</title>
+  <meta name="description" content="{{ desc | escape }}">
+{% if page.keywords %}  <meta name="keywords" content="{{ page.keywords | escape }}">
+{% endif %}  <meta name="author" content="{{ site.author }}">
+{% if page.noindex %}  <meta name="robots" content="noindex">
+{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="icon" href="{{ site.baseurl }}/assets/favicon.svg" type="image/svg+xml">
+{% unless page.noindex %}  <link rel="canonical" href="{{ canonical }}">
+{% endunless %}  <meta name="theme-color" content="#0F172A">
+  <meta property="og:type" content="{% if page.collection == "guides" %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ full_title | escape }}">
+  <meta property="og:description" content="{{ desc | escape }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ site.og_image }}">
+  <meta name="twitter:card" content="summary_large_image">
+{% if page.url == "/" %}  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"{{ site.title }}","url":"{{ site.url }}{{ site.baseurl }}/","description":"Smart home buying guides, device comparisons and practical ideas."}
+  </script>
+{% endif %}

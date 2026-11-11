@@ -1,0 +1,36 @@
+---
+layout: default
+title: "Buying Guides"
+description: "Browse all SmartHomeFinds buying guides: smart home devices, home organization ideas and beginner-friendly advice."
+scripts:
+  - hub.js
+---
+  <main class="section hub" id="main-content">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">LEARN BEFORE YOU BUY</p>
+        <h1>Buying Guides</h1>
+      </div>
+      <p>
+        Helpful, beginner-friendly guides to make smarter
+        home technology decisions.
+      </p>
+    </div>
+
+{% include search-box.html %}
+
+    <div class="filter-chips" id="guide-filters" role="group" aria-label="Filter guides by category" hidden>
+      <button type="button" class="chip active" data-filter="all">All</button>
+{% for c in site.data.categories %}      <button type="button" class="chip" data-filter="{{ c.id }}">{{ c.name }}</button>
+{% endfor %}    </div>
+
+    <div class="guide-grid" id="guide-list">
+{% assign all_guides = site.guides | sort: "order" %}
+{% for g in all_guides %}{% include guide-card.html g=g %}
+{% endfor %}
+    </div>
+
+    <p class="no-results" id="no-guides" hidden>No guides in this category yet.</p>
+
+  </main>

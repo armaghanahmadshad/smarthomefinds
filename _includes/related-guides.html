@@ -1,0 +1,13 @@
+{% assign others = site.guides | where_exp: "g", "g.url != page.url" | sort: "order" %}
+{% if others.size > 0 %}
+    <section class="related-guides">
+      <h2>Keep Reading</h2>
+      <div class="related-list">
+{% for g in others limit: 3 %}        <a class="related-item" href="{{ site.baseurl }}{{ g.url }}">
+          <span class="meta">{{ g.card_meta }}</span>
+          <strong>{{ g.card_title | default: g.title }}</strong>
+        </a>
+{% endfor %}      </div>
+      <p><a href="{{ site.baseurl }}/guides/">Browse all guides →</a></p>
+    </section>
+{% endif %}

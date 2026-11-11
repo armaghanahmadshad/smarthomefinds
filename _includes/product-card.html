@@ -1,0 +1,22 @@
+{% assign p = include.p %}
+<article class="product-card" id="{{ p.id }}">
+  <div class="product-image">
+    <img
+      src="{{ site.baseurl }}/assets/images/{{ p.image }}"
+      width="{{ p.width }}" height="{{ p.height }}"
+      alt="{{ p.alt | escape }}"
+      loading="lazy">
+  </div>
+  <div class="product-info">
+    <span class="meta">{{ p.category | upcase }}</span>
+    <h3>{{ p.name }}</h3>
+    <p>{{ p.description }}</p>
+    <a
+      href="{{ p.url | escape }}"
+      class="text-link"
+      target="_blank"
+      rel="sponsored nofollow noopener">
+      Check Price on {{ p.store | default: "AliExpress" }} →
+    </a>
+  </div>
+</article>

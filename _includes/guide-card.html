@@ -1,0 +1,13 @@
+{% assign g = include.g %}
+{% assign cat = site.data.categories | where: "id", g.category | first %}
+        <article class="guide-card" data-category="{{ g.category }}">
+          <div class="guide-visual {{ cat.visual }}">
+            {{ g.card_visual | default: g.title | upcase }}
+          </div>
+          <div class="guide-body">
+            <p class="meta">{{ g.card_meta }}</p>
+            <h3>{{ g.card_title | default: g.title }}</h3>
+            <p>{{ g.card_summary | default: g.description }}</p>
+            <a href="{{ site.baseurl }}{{ g.url }}" class="text-link">Read Complete Guide →</a>
+          </div>
+        </article>

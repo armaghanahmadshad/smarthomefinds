@@ -1,71 +1,10 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="mitgo-verification" content="a36c9b8a-157d-4622-9167-79dfe61b6a33" />
-  <meta name="description" content="SmartHomeFinds helps you discover smart home devices, practical buying guides, home organization ideas, and automation tips.">
-
-  <meta name="keywords" content="smart home, smart home devices, smart bulbs, smart plugs, home automation, smart home guides">
-
-  <meta name="author" content="SmartHomeFinds">
-
-  <title>SmartHomeFinds | Make Your Home Smarter</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://armaghanahmadshad.github.io/smarthomefinds/">
-  <meta name="theme-color" content="#0F172A">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="SmartHomeFinds">
-  <meta property="og:title" content="SmartHomeFinds | Make Your Home Smarter">
-  <meta property="og:description" content="SmartHomeFinds helps you discover smart home devices, practical buying guides, home organization ideas, and automation tips.">
-  <meta property="og:url" content="https://armaghanahmadshad.github.io/smarthomefinds/">
-  <meta property="og:image" content="https://armaghanahmadshad.github.io/smarthomefinds/assets/images/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"SmartHomeFinds","url":"https://armaghanahmadshad.github.io/smarthomefinds/","description":"Smart home buying guides, device comparisons and practical ideas."}
-  </script>
-  <meta name="p:domain_verify" content="f05c4cf6add2a79fce091291d6f17f23"/>
-</head>
-
-<body>
-
-  <!-- Announcement Bar -->
-  <div class="announcement">
-    DISCOVER SMARTER LIVING • EXPLORE BETTER TECHNOLOGY
-  </div>
-
-  <!-- Header -->
-  <header class="site-header">
-
-    <a href="index.html" class="brand">
-      <span class="brand-mark">S</span>
-      <span>SmartHome<span class="brand-accent">Finds</span></span>
-    </a>
-
-    <button class="menu-toggle"
-      aria-label="Toggle navigation"
-      aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#guides">Buying Guides</a>
-      <a href="#products">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-  </header>
-
-  <main>
+---
+layout: default
+full_title: "SmartHomeFinds | Make Your Home Smarter"
+description: "SmartHomeFinds helps you discover smart home devices, practical buying guides, home organization ideas, and automation tips."
+keywords: "smart home, smart home devices, smart bulbs, smart plugs, home automation, smart home guides"
+---
+  <main id="main-content">
 
     <!-- Hero Section -->
     <section class="hero">
@@ -116,349 +55,95 @@
 
     </section>
 
-    <!-- Categories Section -->
+    <!-- Categories Section (from _data/categories.yml) -->
     <section class="section" id="categories">
 
       <div class="section-heading">
-
         <div>
           <p class="eyebrow">EXPLORE BY CATEGORY</p>
           <h2>Discover Smart Living</h2>
         </div>
-
         <p>
           Explore different areas of smart home technology
           and find ideas that fit your lifestyle.
         </p>
-
       </div>
 
       <div class="category-grid">
-
-        <a href="guides/kitchen-organization.html"
-          class="category-card kitchen">
-
-          <span>ORGANIZE BETTER</span>
-          <h3>Kitchen<br>Organization</h3>
-          <b>Explore Ideas →</b>
-
+{% for c in site.data.categories %}
+        <a href="{{ site.baseurl }}/guides/?category={{ c.id }}" class="category-card {{ c.tile_class }}">
+          <span>{{ c.tile_label }}</span>
+          <h3>{{ c.tile_title }}</h3>
+          <b>{{ c.tile_cta }}</b>
         </a>
-
-        <a href="guides/smart-home-starter.html"
-          class="category-card smart">
-
-          <span>LIVE SMARTER</span>
-          <h3>Smart Home<br>Technology</h3>
-          <b>Explore Guide →</b>
-
-        </a>
-
-        <a href="guides/best-smart-home-devices.html"
-          class="category-card home">
-
-          <span>MAKE BETTER CHOICES</span>
-          <h3>Smart Devices</h3>
-          <b>Discover Devices →</b>
-
-        </a>
-
+{% endfor %}
       </div>
 
     </section>
 
-    <!-- Buying Guides Section -->
+    <!-- Buying Guides Section (from the _guides folder) -->
     <section class="section featured" id="guides">
 
       <div class="section-heading">
-
         <div>
           <p class="eyebrow">LEARN BEFORE YOU BUY</p>
           <h2>Our Latest Buying Guides</h2>
         </div>
-
         <p>
           Helpful information and beginner-friendly advice
           to make smarter home technology decisions.
         </p>
-
       </div>
 
       <div class="guide-grid">
-
-        <!-- Guide 1 -->
-        <article class="guide-card">
-
-          <div class="guide-visual visual-kitchen">
-            KITCHEN ORGANIZATION
-          </div>
-
-          <div class="guide-body">
-
-            <p class="meta">HOME ORGANIZATION</p>
-
-            <h3>10 Practical Kitchen Organization Ideas</h3>
-
-            <p>
-              Discover practical ways to organize your kitchen,
-              maximize storage space, and create a cleaner
-              cooking environment.
-            </p>
-
-            <a href="guides/kitchen-organization.html"
-              class="text-link">
-              Read Complete Guide →
-            </a>
-
-          </div>
-
-        </article>
-
-        <!-- Guide 2 -->
-        <article class="guide-card">
-
-          <div class="guide-visual visual-smart">
-            SMART HOME STARTER
-          </div>
-
-          <div class="guide-body">
-
-            <p class="meta">BEGINNER'S GUIDE</p>
-
-            <h3>Smart Home Starter Guide</h3>
-
-            <p>
-              Learn how smart home technology works,
-              what devices you need, and how to start
-              automating your home.
-            </p>
-
-            <a href="guides/smart-home-starter.html"
-              class="text-link">
-              Read Complete Guide →
-            </a>
-
-          </div>
-
-        </article>
-
-        <!-- Guide 3 -->
-        <article class="guide-card">
-
-          <div class="guide-visual visual-smart">
-            SMART HOME DEVICES
-          </div>
-
-          <div class="guide-body">
-
-            <p class="meta">SMART HOME BUYING GUIDE</p>
-
-            <h3>Best Smart Home Devices for Beginners in 2026</h3>
-
-            <p>
-              Explore smart bulbs, plugs, speakers, security
-              cameras, thermostats, and other useful devices.
-            </p>
-
-            <a href="guides/best-smart-home-devices.html"
-              class="text-link">
-              Read Complete Guide →
-            </a>
-
-          </div>
-
-        </article>
-
+{% assign latest = site.guides | sort: "order" %}
+{% for g in latest limit: 3 %}{% include guide-card.html g=g %}
+{% endfor %}
       </div>
+
+      <p class="section-more"><a href="{{ site.baseurl }}/guides/" class="button">View All Guides →</a></p>
 
     </section>
 
+    <!-- Featured Products Section (from _data/products.yml) -->
+    <section class="section" id="products">
 
-<!-- Featured Products Section -->
-<section class="section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE SMART TECHNOLOGY</p>
+          <h2>Featured Smart Home Products</h2>
+        </div>
+        <p>
+          Discover popular smart home devices and learn
+          what features matter before buying.
+        </p>
+      </div>
 
-  <div class="section-heading">
-    <div>
-      <p class="eyebrow">EXPLORE SMART TECHNOLOGY</p>
-      <h2>Featured Smart Home Products</h2>
-    </div>
-    <p>
-      Discover popular smart home devices and learn
-      what features matter before buying.
-    </p>
-  </div>
+      <div class="product-grid">
+{% for p in site.data.products %}{% if p.featured %}{% include product-card.html p=p %}
+{% endif %}{% endfor %}
+      </div>
 
-  <div class="product-grid">
+{% include affiliate-note.html %}
 
-  
-<!-- Smart Bulb -->
-<article class="product-card">
-  <div class="product-image">
-    <img
-      src="assets/images/bulb.jpg"
-      width="900" height="900"
-      alt="Smart LED light bulb"
-      loading="lazy">
-  </div>
-  <div class="product-info">
-    <span class="meta">SMART LIGHTING</span>
-    <h3>Smart LED Bulbs</h3>
-    <p>
-      Explore app-controlled lighting, adjustable
-      brightness, scheduling, and color options.
-    </p>
-    <a
-      href="https://rzekl.com/g/1e8d114494430c58f04f16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F1005008848360855.html&amp;subid=smartbulb01"
-      class="text-link"
-      target="_blank"
-      rel="sponsored nofollow noopener">
-      Check Price on AliExpress →
-    </a>
-  </div>
-</article>
+      <p class="section-more"><a href="{{ site.baseurl }}/products/" class="button">View All Products →</a></p>
 
+{% include comparison-table.html %}
 
-   
-<!-- Smart Plug -->
-<article class="product-card">
-  <div class="product-image">
-    <img
-      src="assets/images/Plug.jpg"
-      width="1200" height="675"
-      alt="Smart Wi-Fi plug"
-      loading="lazy">
-  </div>
-  <div class="product-info">
-    <span class="meta">HOME AUTOMATION</span>
-    <h3>Smart Plugs</h3>
-    <p>
-      Discover how smart plugs help automate
-      ordinary appliances and manage devices remotely.
-    </p>
-    <a
-      href="https://rzekl.com/g/1e8d114494430c58f04f16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F1005012584972519.html&amp;subid=smartplug01"
-      class="text-link"
-      target="_blank"
-      rel="sponsored nofollow noopener">
-      Check Price on AliExpress →
-    </a>
-  </div>
-</article>
-
-  
-<!-- Security Camera -->
-<article class="product-card">
-  <div class="product-image">
-    <img
-      src="assets/images/Camera.jpg"
-      width="1200" height="800"
-      alt="Indoor smart home security camera"
-      loading="lazy">
-  </div>
-  <div class="product-info">
-    <span class="meta">HOME SECURITY</span>
-    <h3>Smart Security Cameras</h3>
-    <p>
-      Understand video quality, storage options,
-      motion detection, and privacy features.
-    </p>
-    <a
-      href="https://rzekl.com/g/1e8d114494430c58f04f16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F1005008459563215.html&amp;subid=smartcam01"
-      class="text-link"
-      target="_blank"
-      rel="sponsored nofollow noopener">
-      Check Price on AliExpress →
-    </a>
-  </div>
-</article>
-
-</div>
-
-<p class="affiliate-note">
-  <strong>Affiliate disclosure:</strong> Some links on this page are affiliate links.
-  If you buy through them, SmartHomeFinds may earn a small commission at no extra cost to you.
-  <a href="disclosure.html">Learn more</a>.
-</p>
-
-<!-- Product Comparison Table -->
-<div class="comparison-section">
-
-  <div class="comparison-heading">
-    <p class="eyebrow">COMPARE BEFORE YOU BUY</p>
-    <h2>Smart Home Device Comparison</h2>
-    <p>
-      Compare popular smart home device categories
-      and understand their main features.
-    </p>
-  </div>
-
-  <div class="comparison-scroll">
-    <table class="comparison-table">
-
-      <thead>
-        <tr>
-          <th>Device</th>
-          <th>Main Purpose</th>
-          <th>Connectivity</th>
-          <th>Advantages</th>
-          <th>Things to Consider</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td><strong>Smart Bulbs</strong></td>
-          <td>Lighting control</td>
-          <td>Wi-Fi / Zigbee / Matter*</td>
-          <td>Scheduling, brightness and color control</td>
-          <td>Hub requirements and compatibility</td>
-        </tr>
-
-        <tr>
-          <td><strong>Smart Plugs</strong></td>
-          <td>Appliance automation</td>
-          <td>Wi-Fi / Matter*</td>
-          <td>Remote control and scheduling</td>
-          <td>Power rating and appliance suitability</td>
-        </tr>
-
-        <tr>
-          <td><strong>Security Cameras</strong></td>
-          <td>Home monitoring</td>
-          <td>Usually Wi-Fi</td>
-          <td>Live viewing and motion alerts</td>
-          <td>Privacy, storage and subscription costs</td>
-        </tr>
-      </tbody>
-
-    </table>
-  </div>
-
-  <p class="comparison-note">
-    *Connectivity and compatibility vary by model.
-    Always check the manufacturer's specifications
-    before purchasing.
-  </p>
-
-</div>
-
-</section>
-
+    </section>
 
     <!-- Why Choose Us Section -->
     <section class="section featured">
 
       <div class="section-heading">
-
         <div>
           <p class="eyebrow">WHY SMART HOME FINDS?</p>
           <h2>Making Smart Choices Easier</h2>
         </div>
-
         <p>
           Our goal is to make smart home technology
           easier to understand for everyone.
         </p>
-
       </div>
 
       <div class="category-grid">
@@ -485,7 +170,7 @@
 
     </section>
 
-    <!-- Newsletter / Contact Section -->
+    <!-- Contact Section -->
     <section class="newsletter">
 
       <p class="eyebrow">LET'S CONNECT</p>
@@ -497,51 +182,10 @@
         and stay informed about smarter ways to live.
       </p>
 
-      <a href="contact.html" class="button button-light">
+      <a href="{{ site.baseurl }}/contact.html" class="button button-light">
         Get in Touch →
       </a>
 
     </section>
 
   </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-
-    <a href="index.html" class="brand footer-brand">
-      <span class="brand-mark">S</span>
-      <span>SmartHome<span class="brand-accent">Finds</span></span>
-    </a>
-
-    <p>
-      Helping you discover smarter technology
-      and better ways to organize your home.
-    </p>
-
-    <div class="footer-links">
-
-      <a href="index.html">Home</a>
-
-      <a href="about.html">About</a>
-
-      <a href="contact.html">Contact</a>
-
-      <a href="disclosure.html">Affiliate Disclosure</a>
-
-      <a href="privacy.html">Privacy Policy</a>
-
-    </div>
-
-    <small>
-      © <span id="year">2026</span> SmartHomeFinds.
-      All rights reserved.
-    </small>
-
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/consent.js"></script>
-
-</body>
-</html>

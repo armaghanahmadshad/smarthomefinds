@@ -1,0 +1,31 @@
+# Edit this file to change the menu and footer links on every page.
+main:
+  - title: Home
+    url: /
+  - title: Guides
+    url: /guides/
+    collection: guides
+  - title: Products
+    url: /products/
+  - title: About
+    url: /about.html
+  - title: Contact
+    url: /contact.html
+  - title: Search
+    url: /search/
+
+footer:
+  - title: Home
+    url: /
+  - title: Guides
+    url: /guides/
+  - title: Products
+    url: /products/
+  - title: About
+    url: /about.html
+  - title: Contact
+    url: /contact.html
+  - title: Affiliate Disclosure
+    url: /disclosure.html
+  - title: Privacy Policy
+    url: /privacy.html
